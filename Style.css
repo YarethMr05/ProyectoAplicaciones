@@ -132,9 +132,10 @@ body {
 
 /* Offers Section */
 .offers {
-  padding: 60px 0;
+  padding: 0;
   background-color: #fff;
 }
+
 
 .offers-content {
   display: grid;
@@ -162,7 +163,26 @@ body {
   color: #7f8c8d;
 }
 
-/* Cases Section */
+.container_video h2 {
+  margin-top: 3rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.video-header {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+
+
 .cases {
   padding: 60px 0;
   background-color: #f8f9fa;
@@ -174,12 +194,47 @@ body {
   gap: 30px;
 }
 
+.venta-grid {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
 .case-card {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+
+.venta-card {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 340px;
+  text-align: center;
+}
+
+.venta-content {
+  padding: 2rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.venta-content h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.venta-content h3 {
+  padding-top: 0.5rem;
+  color: #4b6886;
+  margin-bottom: 10px;
 }
 
 .case-card:hover {
@@ -190,25 +245,27 @@ body {
   width: 100%;
   height: 240px;
   object-fit: cover;
-  
+
 }
+
 .button-card {
-     color: white;
- background-color: rgb(110, 112, 108);
- padding: 0.8rem 1rem;
- margin-top: 0.5rem;
- font-size: 1rem;
- text-decoration: none;
- text-transform: uppercase;
- font-weight: bold;
- border-radius: 1rem;
- width: 70%;
- text-align: center;
- border: none;
- transition: all 0.3s ease-in-out;
+  color: white;
+  background-color: rgb(110, 112, 108);
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 1rem;
+  width: 70%;
+  text-align: center;
+  border: none;
+  transition: all 0.3s ease-in-out;
 }
+
 .button-card:hover {
-   cursor: pointer;
+  cursor: pointer;
   background: #198129;
   color: white;
   transform: scale(0.9);
@@ -244,7 +301,7 @@ body {
 }
 
 .about-overlay {
-    width: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -286,6 +343,9 @@ body {
   background-color: #fff;
   color: #000;
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -351,5 +411,5 @@ body {
   .about-overlay h2 {
     font-size: 1.8rem;
   }
-  
+
 }

@@ -1,36 +1,35 @@
- const miDiv = document.getElementById("card_mantenimiento");
+const enlaces = [
+      { trigger: 'card_mantenimiento', destino: 'section_mantenimiento' },
+      { trigger: 'card_compra', destino: 'section_compra' },
+      { trigger: 'card_venta', destino: 'section_venta' },
+      { trigger: 'card_asesoria', destino: '' }
+    ];
+ enlaces.forEach(({ trigger, destino }) => {
+      const div = document.getElementById(trigger);
+      const seccion = document.getElementById(destino);
 
-    miDiv.addEventListener("click", function() {
-      // Redirige a un ID del mismo HTML
-      window.location.href = "#inicio";
+      div.addEventListener('click', () => {
+        /* Desplaza suavemente hasta la sección */
+        seccion.scrollIntoView({ behavior: 'smooth' });
+      });
     });
+//esto es para poder tener un video de youtube en la pagina
+let player;
 
-     let player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '460',
+        width: '940',
+        videoId: 'Fte5XRZjU9c',
 
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '360',
-          width: '640',
-          videoId: 'Fte5XRZjU9c', 
-          
-          events: {
+        events: {
             'onReady': onPlayerReady
-          }
-        });
-      }
+        }
+    });
+}
 
-      function onPlayerReady(event) {
-        console.log("Video listo para interactuar");
-      }
+function onPlayerReady(event) {
+    console.log("Video listo para interactuar");
+}
 
-      function playVideo() {
-        player.playVideo();
-      }
 
-      function pauseVideo() {
-        player.pauseVideo();
-      }
-
-      function muteVideo() {
-        player.mute();
-      }
